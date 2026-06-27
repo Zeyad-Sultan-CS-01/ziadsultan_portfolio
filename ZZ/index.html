@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Dynamic Portfolio of Ziad Wahba Sultan Farag - Cybersecurity Student, Python & Django Developer, and AI Enthusiast.">
+    <meta name="author" content="Ziad Wahba Sultan Farag">
+    <title>Ziad Farag | Professional Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Background Grid Effect -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+
+    <!-- Toast Notification System -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                &lt;Ziad.<span class="logo-accent">Sultan</span>/&gt;
+            </a>
+            
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation" id="mobile-toggle">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+                    <li><a href="#deployments" class="nav-link">Deployments</a></li>
+                    <li><a href="#contact" class="nav-link">Connection</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section section-padding">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        ● OPEN FOR COLLABORATION
+                    </div>
+                    <h1 class="hero-name">Ziad Wahba Sultan Farag</h1>
+                    <div class="hero-titles">
+                        <span class="title-tag">Cybersecurity Student</span>
+                        <span class="title-divider">|</span>
+                        <span class="title-tag">Python & Django Developer</span>
+                        <span class="title-divider">|</span>
+                        <span class="title-tag">AI Enthusiast</span>
+                    </div>
+                    <p class="hero-bio">
+                        Pursuing a rigorous academic path at <strong>Damanhour National University</strong>, Faculty of Computers and Information. I specialize in engineering highly secure, scalable backend architectures with Django and developing proactive security solutions to safeguard modern cloud ecosystems.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <div class="cv-uploader-group">
+                            <a href="#" id="download-cv-btn" class="btn btn-primary">
+                                <i class="fa-solid fa-file-arrow-down"></i> Download CV
+                            </a>
+                            <button id="upload-cv-trigger" class="btn btn-settings" title="Upload CV (PDF or DOCX)">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                            <!-- Hidden inputs for uploads -->
+                            <input type="file" id="cv-input" accept=".pdf,.docx" style="display: none;">
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://wa.me/201069511634" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" title="Chat on WhatsApp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ziad-sultan-645343417" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" title="Connect on LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/Ziad-Sultan-CS-01" target="_blank" rel="noopener noreferrer" class="social-icon github" title="Explore GitHub Projects">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/14dguyXx87E/" target="_blank" rel="noopener noreferrer" class="social-icon facebook" title="Connect on Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/zeyad11958?igsh=MXFmOWExbzRxd3dpZA==" target="_blank" rel="noopener noreferrer" class="social-icon instagram" title="Connect on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-avatar-area">
+                    <div class="avatar-wrapper" id="avatar-container" title="Click to upload profile photo">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-inner">
+                            <img id="avatar-img" src="assets/avatar.jpg" alt="Ziad Wahba Sultan Farag" class="avatar-image">
+                            <div class="avatar-overlay">
+                                <i class="fa-solid fa-camera"></i>
+                                <span>Click to update photo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+                    <div class="avatar-hint">Supports JPG, PNG, WEBP (Max 2MB)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-heading">Biography</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-main-text card">
+                        <div class="card-glow"></div>
+                        <h3 class="about-subtitle">The Journey & Philosophy</h3>
+                        <p>
+                            My professional journey in software engineering officially ignited in <strong>2024</strong>. Driven by a deep curiosity about how large-scale web ecosystems operate and how vulnerabilities are exploited, I began mastering programming and core computer systems. 
+                        </p>
+                        <p>
+                            In <strong>2025</strong>, I entered university to build a structured academic foundation in computer science. I strongly believe that university is a catalyst, but true excellence stems from an <strong>autonomous self-learning mindset</strong>. I dedicate my free hours to deep-diving into networks, security models, and writing high-efficiency Python code.
+                        </p>
+                        <p>
+                            My development philosophy is centered around <strong>analytical problem-solving</strong>. I don't just write code that works; I design structured codebases that are secure by default, easily maintainable, and optimized for high-capacity workflows.
+                        </p>
+                    </div>
+
+                    <div class="about-strengths card">
+                        <div class="card-glow"></div>
+                        <h3 class="about-subtitle">Core Strengths</h3>
+                        <ul class="strengths-list">
+                            <li class="strength-item">
+                                <div class="strength-icon"><i class="fa-solid fa-bolt"></i></div>
+                                <div>
+                                    <h4>Self-Directed Learner</h4>
+                                    <p>Proven track record of mastering new libraries, system tools, and security concepts independently.</p>
+                                </div>
+                            </li>
+                            <li class="strength-item">
+                                <div class="strength-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                <div>
+                                    <h4>Security First Thinking</h4>
+                                    <p>Applying defensive programming techniques and cryptography concepts to all application architectures.</p>
+                                </div>
+                            </li>
+                            <li class="strength-item">
+                                <div class="strength-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                                <div>
+                                    <h4>Analytical Engineering</h4>
+                                    <p>Deconstructing complex backend bottlenecks and building clean database designs using strict software principles.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-heading">Academic Path</span>
+                    <h2 class="section-title">Education</h2>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="timeline-card card">
+                            <div class="card-glow"></div>
+                            <span class="timeline-date">2025 — Present</span>
+                            <h3 class="timeline-degree">B.Sc. in Computer Science and Information Technology</h3>
+                            <h4 class="timeline-institution">Faculty of Computers and Information, Damanhour National University</h4>
+                            <p class="timeline-status">Second-Year Student (In Progress)</p>
+                            <p class="timeline-description">
+                                Focusing on computer architecture, software design patterns, and network communications while maintaining active self-learning projects in Python backend architectures.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag-badge">Introduction to Cybersecurity</span>
+                                <span class="tag-badge">Programming in Java</span>
+                                <span class="tag-badge">Computer Networks</span>
+                                <span class="tag-badge">Operating Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Capabilities -->
+        <section id="capabilities" class="capabilities-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-heading">Proficiencies</span>
+                    <h2 class="section-title">Technical Capabilities</h2>
+                </div>
+
+                <div class="capabilities-grid">
+                    <!-- Column 1: Programming -->
+                    <div class="capability-card card">
+                        <div class="card-glow-violet"></div>
+                        <div class="capability-header">
+                            <div class="capability-icon programming"><i class="fa-solid fa-code"></i></div>
+                            <h3 class="capability-title">Programming & Logic</h3>
+                        </div>
+                        <p class="capability-intro">
+                            Deep grounding in writing clean, logic-driven scripts and object-oriented architectures. I prioritize performance efficiency and readable code design.
+                        </p>
+                        <ul class="capability-list">
+                            <li>
+                                <strong>Core Python execution logic:</strong> Scripting, automation, clean list comprehensions, generator functions, and concurrent execution.
+                            </li>
+                            <li>
+                                <strong>Java (Object-Oriented Programming):</strong> Explicit understanding of polymorphism, inheritance, encapsulation, and interface abstraction models.
+                            </li>
+                            <li>
+                                <strong>Data Structures & Algorithms:</strong> Implementing custom lists, stacks, queues, hash maps, sorting algorithms, and evaluating time complexity (Big O).
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Backend Development -->
+                    <div class="capability-card card">
+                        <div class="card-glow-emerald"></div>
+                        <div class="capability-header">
+                            <div class="capability-icon backend"><i class="fa-solid fa-server"></i></div>
+                            <h3 class="capability-title">Backend Development</h3>
+                        </div>
+                        <p class="capability-intro">
+                            Specialized in constructing secure server-side applications that are resilient against attacks and optimized for rapid API access.
+                        </p>
+                        <ul class="capability-list">
+                            <li>
+                                <strong>Django Framework:</strong> Harnessing model structures, class-based views, middleware operations, and templating systems.
+                            </li>
+                            <li>
+                                <strong>Django Built-in Security Architecture:</strong> Configuring protection structures against SQL Injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF).
+                            </li>
+                            <li>
+                                <strong>Django REST Framework (DRF):</strong> Building serialized JSON payloads, customized model serializers, and JWT token authentication policies.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Deployments -->
+        <section id="deployments" class="deployments-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-heading">Active Work</span>
+                    <h2 class="section-title">Current Deployments</h2>
+                </div>
+
+                <div class="deployments-grid">
+                    <!-- SmartAttend Card -->
+                    <div class="project-card card">
+                        <div class="card-glow"></div>
+                        <div class="project-header">
+                            <div class="badge-rtl-container">
+                                <span class="badge-wip" dir="rtl" lang="ar">جاري العمل عليه</span>
+                            </div>
+                            <h3 class="project-name">SmartAttend</h3>
+                        </div>
+                        <p class="project-description">
+                            An AI-powered Hybrid Face & Eye/Periocular Recognition Attendance System designed specifically as a responsive web application for automated, high-efficiency university attendance tracking via mobile screens.
+                        </p>
+                        
+                        <!-- Comprehensive Technical Architecture Components -->
+                        <div class="smartattend-architecture">
+                            <h4 class="architecture-title"><i class="fa-solid fa-gears"></i> Comprehensive Technical Architecture</h4>
+                            <div class="architecture-grid">
+                                <div class="arch-item">
+                                    <div class="arch-header">
+                                        <span class="arch-num">01</span>
+                                        <h5>Front-end & UX</h5>
+                                    </div>
+                                    <p>Built with React.js (SPA architecture) utilizing React Web Camera API (<code>react-webcam</code>) for live browser-based mobile camera capture, Axios for secure asynchronous data/image streaming, and Tailwind CSS/Bootstrap for fluid cross-device synchronization.</p>
+                                </div>
+                                
+                                <div class="arch-item">
+                                    <div class="arch-header">
+                                        <span class="arch-num">02</span>
+                                        <h5>Back-end Logic</h5>
+                                    </div>
+                                    <p>Powered by Django Framework and Django REST Framework (DRF) implementing robust Token-based authentication, user role privileges, and automated registry scheduling, managed with Django ORM.</p>
+                                </div>
+                                
+                                <div class="arch-item">
+                                    <div class="arch-header">
+                                        <span class="arch-num">03</span>
+                                        <h5>Database & Core Storage</h5>
+                                    </div>
+                                    <p>Enterprise-grade PostgreSQL relational structure for records, integrated with Django Signals and optimized Media Storage pipelines for secure reference image handling.</p>
+                                </div>
+                                
+                                <div class="arch-item">
+                                    <div class="arch-header">
+                                        <span class="arch-num">04</span>
+                                        <h5>Hybrid Vision & AI Engine</h5>
+                                    </div>
+                                    <p>OpenCV for image pre-processing. DeepFace (FaceNet/ResNet) for full-face matching. MediaPipe Face Mesh for rapid 3D point isolation and periocular region cropping. Local Binary Patterns (LBP) for dynamic texture feature extraction under shifting classroom illumination. MobileNetV2 (TensorFlow/Keras) deep neural network for low-latency transformation of LBP data into highly optimized embedding vectors.</p>
+                                </div>
+                                
+                                <div class="arch-item full-width">
+                                    <div class="arch-header">
+                                        <span class="arch-num">05</span>
+                                        <h5>Performance & Excel Reports</h5>
+                                    </div>
+                                    <p>Celery distributed task queue backed by Redis in-memory broker for heavy asynchronous AI background matching workflows. <code>openpyxl</code> integration to extract, compile, and format dynamic Excel tables (.xlsx) downloadable instantly via a single doctor-panel interaction.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Django & DRF</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">OpenCV & MediaPipe</span>
+                            <span class="tech-tag">Celery & Redis</span>
+                        </div>
+                    </div>
+
+                    <!-- Wasla Card -->
+                    <div class="project-card card">
+                        <div class="card-glow"></div>
+                        <div class="project-header">
+                            <div class="badge-rtl-container">
+                                <span class="badge-wip" dir="rtl" lang="ar">جاري العمل عليه</span>
+                            </div>
+                            <h3 class="project-name">Wasla <span class="project-arabic-title" dir="rtl" lang="ar">(مشروع وصلة)</span></h3>
+                        </div>
+                        <p class="project-description">
+                            A comprehensive Arabic professional networking and scholarship platform designed as a localized "Arabic LinkedIn" for youth. It features a streamlined dual-mode ecosystem where users seamlessly switch between Professional Mode (Profiles, Jobs, Connections) and Scholarships Mode (Automated global scholarship aggregation from international sites). Built as a real production initiative for production stores.
+                        </p>
+                        
+                        <!-- Wasla Track Capabilities & Tech Stack (Streamlined) -->
+                        <div class="wasla-tech-stack-box">
+                            <h4 class="architecture-title"><i class="fa-solid fa-layer-group"></i> Integrated Track Capabilities & Tech Stack</h4>
+                            <div class="wasla-tech-grid">
+                                <div class="wasla-tech-item">
+                                    <span class="track-tag-mini"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Architecture</span>
+                                    <p>React Native (Cross-platform Android & iOS delivery)</p>
+                                </div>
+                                <div class="wasla-tech-item">
+                                    <span class="track-tag-mini"><i class="fa-solid fa-server"></i> Backend Engine</span>
+                                    <p>Java + Spring Boot + MySQL relational structure</p>
+                                </div>
+                                <div class="wasla-tech-item">
+                                    <span class="track-tag-mini"><i class="fa-solid fa-spider"></i> Data Scraping Pipeline</span>
+                                    <p>Python + Scrapy + FastAPI automated pipelines</p>
+                                </div>
+                                <div class="wasla-tech-item">
+                                    <span class="track-tag-mini"><i class="fa-solid fa-shield-halved"></i> Security Engineering</span>
+                                    <p>Advanced Encryption protocols & OWASP Security Audit</p>
+                                </div>
+                                <div class="wasla-tech-item full-width">
+                                    <span class="track-tag-mini"><i class="fa-solid fa-cloud-arrow-up"></i> DevOps & Infrastructure</span>
+                                    <p>Docker Containerization & AWS Deployments</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Java + Spring Boot</span>
+                            <span class="tech-tag">FastAPI & Scrapy</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Docker & AWS</span>
+                            <span class="tech-tag">OWASP Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Establish Connection -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub-heading">Get In Touch</span>
+                    <h2 class="section-title">Establish Connection</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Address Card -->
+                    <div class="contact-card card">
+                        <div class="card-glow"></div>
+                        <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <h3>Location Address</h3>
+                        <p class="arabic-address" dir="rtl" lang="ar">
+                            مصر، البحيرة، الدلنجات، البستان، النهر
+                        </p>
+                        <p class="english-address">
+                            Egypt, El Beheira, El Delengat, El Bustan, El Nahr
+                        </p>
+                    </div>
+
+                    <!-- Direct Connect Channels -->
+                    <div class="contact-card card">
+                        <div class="card-glow"></div>
+                        <div class="contact-icon"><i class="fa-solid fa-comments"></i></div>
+                        <h3>Direct Communication Channels</h3>
+                        <p class="connect-desc">Click any of the links below to instantly reach out, view my source code repositories, or connect professionally.</p>
+                        <div class="direct-links-grid">
+                            <a href="https://wa.me/201069511634" target="_blank" rel="noopener noreferrer" class="direct-btn whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i> WhatsApp Direct
+                            </a>
+                            <a href="https://www.linkedin.com/in/ziad-sultan-645343417" target="_blank" rel="noopener noreferrer" class="direct-btn linkedin">
+                                <i class="fa-brands fa-linkedin-in"></i> LinkedIn Profile
+                            </a>
+                            <a href="https://github.com/Ziad-Sultan-CS-01" target="_blank" rel="noopener noreferrer" class="direct-btn github">
+                                <i class="fa-brands fa-github"></i> GitHub Profile
+                            </a>
+                            <a href="https://www.facebook.com/share/14dguyXx87E/" target="_blank" rel="noopener noreferrer" class="direct-btn facebook">
+                                <i class="fab fa-facebook"></i> Facebook Profile
+                            </a>
+                            <a href="https://www.instagram.com/zeyad11958?igsh=MXFmOWExbzRxd3dpZA==" target="_blank" rel="noopener noreferrer" class="direct-btn instagram">
+                                <i class="fab fa-instagram"></i> Instagram Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Ziad Wahba Sultan Farag. All Rights Reserved.</p>
+            <div class="footer-utilities">
+                <button id="reset-storage-btn" class="btn btn-reset" title="Wipe local storage & restore defaults">
+                    <i class="fa-solid fa-trash-can"></i> Reset Custom Avatar / CV
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
